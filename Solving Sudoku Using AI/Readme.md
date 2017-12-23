@@ -71,6 +71,9 @@ Strategy 2: Only Choice
 If there is only one box in a unit which would allow a certain digit, then that box must be assigned that digit.
 
 
+![sudoku_only_choice](https://user-images.githubusercontent.com/21977558/34321565-25c4698e-e838-11e7-93c2-f3b556e0da3e.png)
+
+
 
 
 
