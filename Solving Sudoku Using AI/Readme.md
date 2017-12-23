@@ -34,6 +34,31 @@ Let's see an example. In the grids below, the set of highlighted boxes represent
 
 
 
+Now, in order to implement an agent,  we will code the  Board in Python . Then, we'll code the necessary functions to solve the Sudoku. We'll record the puzzles in two ways — as a string and as a dictionary.
+
+The string will consist of a concatenation of all the readings of the digits in the rows, taking the rows from top to bottom. If the puzzle is not solved, we can use a . as a placeholder for an empty box.
+
+For example, the unsolved puzzle at the above left will be written as: ..3.2.6..9..3.5..1..18.64....81.29..7.......8..67.82....26.95..8..2.3..9..5.1.3..
+
+And the solved puzzle at the above right, will be recorded as: 483921657967345821251876493548132976729564138136798245372689514814253769695417382
+
+The dictionary was implemented as follows . The keys will be strings corresponding to the boxes — namely, 'A1', 'A2', ..., 'I9'. The values will either be the digit in each box (if there is one) or a '.' (if not).
+
+
+>>> from utils import display
+>>> display(grid_values('..3.2.6..9..3.5..1..18.64....81.29..7.......8..67.82....26.95..8..2.3..9..5.1.3..'))
+. . 3 |. 2 . |6 . . 
+9 . . |3 . 5 |. . 1 
+. . 1 |8 . 6 |4 . . 
+------+------+------
+. . 8 |1 . 2 |9 . . 
+7 . . |. . . |. . 8 
+. . 6 |7 . 8 |2 . . 
+------+------+------
+. . 2 |6 . 9 |5 . . 
+8 . . |2 . 3 |. . 9 
+. . 5 |. 1 . |3 . .
+
 
 
 ## Visualization
