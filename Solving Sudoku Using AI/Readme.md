@@ -117,6 +117,11 @@ A diagonal sudoku is like a regular sudoku, except that among the two main diago
 
 
 
+![diagonal-sudoku](https://user-images.githubusercontent.com/21977558/34321637-fa94a7ae-e839-11e7-9e8a-fde2a65243bd.png)
+
+
+
+
 ## Visualization
 
 **Note:** The `pygame` library is required to visualize the solution -- however, the `pygame` module can be troublesome to install and configure. It should be installed by default with the AIND conda environment, but it is not reliable across all operating systems or versions. Please refer to the pygame documentation [here](http://www.pygame.org/download.shtml), or discuss among your peers in the slack group or discussion forum if you need help.
