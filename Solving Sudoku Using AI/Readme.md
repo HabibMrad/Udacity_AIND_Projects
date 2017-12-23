@@ -111,7 +111,7 @@ As you can see, we've removed the values 2 and 3 from the boxes 'D3' and 'E3'. T
 
 
 
-## Strategy 4 : Diagonal Sudoku
+## Strategy 5 : Diagonal Sudoku
 
 A diagonal sudoku is like a regular sudoku, except that among the two main diagonals, the numbers 1 to 9 should all appear exactly once. In this project, you'll modify the functions we've written in the lecture (or you can write your own!) in order to solve every diagonal sudoku.
 
