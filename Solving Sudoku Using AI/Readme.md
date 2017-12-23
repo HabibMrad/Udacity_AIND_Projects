@@ -106,7 +106,7 @@ Thus, I went over all the boxes in their same unit, and remove the values 2 and 
 ![sudoku_naked-twins-2](https://user-images.githubusercontent.com/21977558/34321630-c845869c-e839-11e7-9a13-97502ab410f7.png)
 
 
-As you can see, I have removed the values 2 and 3 from the boxes 'D3' and 'E3'. This is the naked twins technique. I implemented this technique in this project.
+As you can see, I have removed the values 2 and 3 from the boxes 'D3' and 'E3'. This is the naked twins technique. I implemented this technique in the project.
 
 
 
@@ -114,7 +114,7 @@ As you can see, I have removed the values 2 and 3 from the boxes 'D3' and 'E3'. 
 
 
 
-A diagonal sudoku is like a regular sudoku, except that among the two main diagonals, the numbers 1 to 9 should all appear exactly once. I also implemented a technique in the project.
+A diagonal sudoku is like a regular sudoku, except that among the two main diagonals, the numbers 1 to 9 should all appear exactly once. I also implemented a technique in the project to implement this.
 
 
 ![diagonal-sudoku](https://user-images.githubusercontent.com/21977558/34321637-fa94a7ae-e839-11e7-9e8a-fde2a65243bd.png)
