@@ -47,6 +47,27 @@ The dictionary was implemented as follows . The keys will be strings correspondi
 
 
 
+# Strategies used :-
+
+
+## Strategy 1: Elimination
+
+
+If a box has a value assigned, then none of the peers of this box can have this value.
+
+Now that we know how to eliminate values, we can take one pass, go over every box that has a value, and eliminate the values that can't appear on the box, based on its peers. Once we do so, the board looks like this (for clarity, we've highlighted the original filled-in boxes in bold lettering):
+
+(Notice that if we take a second pass through the puzzle, we can gain even more information, but this is not necessary for now.)
+
+
+
+
+As of now, we are recording the puzzles in dictionary form, where the keys are the boxes ('A1', 'A2', ... , 'I9') and the values are either the value for each box (if a value exists) or '.' (if the box has no value assigned yet). What we really want is for each value to represent all the available values for that box. For example, the box in the second row and fifth column above will have key 'B5' and value '47' (because 4 and 7 are the only possible values for it). The starting value for every empty box will thus be '123456789'.
+
+
+
+
+
 
 
 ## Visualization
