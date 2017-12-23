@@ -85,6 +85,35 @@ Pick a box with a minimal number of possible values. Try to solve each of the pu
 ![sudoku_search](https://user-images.githubusercontent.com/21977558/34321611-174cde44-e839-11e7-9255-3a3845d8b83b.png)
 
 
+## Strategy 4 : Naked Twins
+
+The naked twins technique is the following. Consider the following puzzle, and look at the two highlighted boxes, 'F3' and 'I3'.
+
+
+
+![sudoku_naked-twins_1](https://user-images.githubusercontent.com/21977558/34321628-b06a2e06-e839-11e7-80bc-a8126b0fe8ea.png)
+
+
+
+
+As we can see, both belong to the same column, and both permit the values of 2 and 3. Now, we don't know which one has a 2 and which one has a 3, but we know one thing for sure — the values 2 and 3 are locked in those two boxes, so no other box in their same unit (the third column) can contain the values 2 or 3.
+
+Thus, we go over all the boxes in their same unit, and remove the values 2 and 3 from their possible values.
+
+
+![sudoku_naked-twins-2](https://user-images.githubusercontent.com/21977558/34321630-c845869c-e839-11e7-9a13-97502ab410f7.png)
+
+
+As you can see, we've removed the values 2 and 3 from the boxes 'D3' and 'E3'. This is the naked twins technique. In this project, you'll write a function that implements this technique.
+
+
+
+
+
+
+## Strategy 4 : Diagonal Sudoku
+
+A diagonal sudoku is like a regular sudoku, except that among the two main diagonals, the numbers 1 to 9 should all appear exactly once. In this project, you'll modify the functions we've written in the lecture (or you can write your own!) in order to solve every diagonal sudoku.
 
 
 
