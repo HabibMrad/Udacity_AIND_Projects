@@ -60,6 +60,8 @@ Now that we know how to eliminate values, we can take one pass, go over every bo
 (Notice that if we take a second pass through the puzzle, we can gain even more information, but this is not necessary for now.)
 
 
+![sudoku_elimination](https://user-images.githubusercontent.com/21977558/34321544-861df954-e837-11e7-921e-b00ae9c54321.png)
+
 
 
 As of now, we are recording the puzzles in dictionary form, where the keys are the boxes ('A1', 'A2', ... , 'I9') and the values are either the value for each box (if a value exists) or '.' (if the box has no value assigned yet). What we really want is for each value to represent all the available values for that box. For example, the box in the second row and fifth column above will have key 'B5' and value '47' (because 4 and 7 are the only possible values for it). The starting value for every empty box will thus be '123456789'.
