@@ -45,8 +45,6 @@ And the solved puzzle at the above right, will be recorded as: 48392165796734582
 The dictionary was implemented as follows . The keys will be strings corresponding to the boxes — namely, 'A1', 'A2', ..., 'I9'. The values will either be the digit in each box (if there is one) or a '.' (if not).
 
 
->>> from utils import display
->>> display(grid_values('..3.2.6..9..3.5..1..18.64....81.29..7.......8..67.82....26.95..8..2.3..9..5.1.3..'))
 
 
 
