@@ -2,16 +2,19 @@
 
 ## Synopsis
 
-In this project, I will extend the Sudoku-solving agent developed in the classroom lectures to solve _diagonal_ Sudoku puzzles. A diagonal Sudoku puzzle is identical to traditional Sudoku puzzles with the added constraint that the boxes on the two main diagonals of the board must also contain the digits 1-9 in each cell (just like the rows, columns, and 3x3 blocks).
+In this project, I implemented an **AI agent** that can solve **diagonal sudoku** problems. A diagonal Sudoku puzzle is identical to traditional Sudoku puzzles with the added constraint that the boxes on the two main diagonals of the board must also contain the digits 1-9 in each cell (just like the rows, columns, and 3x3 blocks).
 
 
 # Naming Conventions
+
+
 ## Rows and Columns
+
 
 The convention for naming rows and columns is as follows.
 
     The rows will be labelled by the letters A, B, C, D, E, F, G, H, I.
-    The columns will be labelled by the numbers 1, 2, 3, 4, 5, 6, 7, 8, 9. Here we can see the unsolved and solved puzzles with the labels for the rows and columns.
+    The columns will be labelled by the numbers 1, 2, 3, 4, 5, 6, 7, 8, 9. 
     The 3x3 squares won't be labelled, but in the diagram, they can be seen with alternating colors of grey and white.
 
 
@@ -22,7 +25,7 @@ The convention for naming rows and columns is as follows.
 
 ## Boxes, Units and Peers
 
-We have named important elements created by these rows and columns that are relevant to solving a Sudoku:
+I have named important elements created by these rows and columns that are relevant to solving a Sudoku:
 
     The individual squares at the intersection of rows and columns will be called boxes. These boxes will have labels 'A1', 'A2', ..., 'I9'.
     The complete rows, columns, and 3x3 squares, will be called units. Thus, each unit is a set of 9 boxes, and there are 27 units in total.
@@ -34,9 +37,9 @@ Let's see an example. In the grids below, the set of highlighted boxes represent
 
 
 
-Now, in order to implement an agent,  we will code the  Board in Python . Then, we'll code the necessary functions to solve the Sudoku. We'll record the puzzles in two ways — as a string and as a dictionary.
+Now, in order to implement an agent,  I coded the  Board in Python . Then, I coded the necessary functions to solve the Sudoku. I  recorded the puzzles in two ways — as a string and as a dictionary.
 
-The string will consist of a concatenation of all the readings of the digits in the rows, taking the rows from top to bottom. If the puzzle is not solved, we can use a . as a placeholder for an empty box.
+The string consisted of a concatenation of all the readings of the digits in the rows, taking the rows from top to bottom. If the puzzle is not solved, I used a . as a placeholder for an empty box.
 
 For example, the unsolved puzzle at the above left will be written as: ..3.2.6..9..3.5..1..18.64....81.29..7.......8..67.82....26.95..8..2.3..9..5.1.3..
 
@@ -55,16 +58,15 @@ The dictionary was implemented as follows . The keys will be strings correspondi
 
 If a box has a value assigned, then none of the peers of this box can have this value.
 
-Now that we know how to eliminate values, we can take one pass, go over every box that has a value, and eliminate the values that can't appear on the box, based on its peers. Once we do so, the board looks like this (for clarity, we've highlighted the original filled-in boxes in bold lettering):
+ I took one pass, went over every box that has a value, and eliminated the values that can't appear on the box, based on its peers. Once I did so, the board looked like this (for clarity, I have highlighted the original filled-in boxes in bold lettering):
 
-(Notice that if we take a second pass through the puzzle, we can gain even more information, but this is not necessary for now.)
 
 
 ![sudoku_elimination](https://user-images.githubusercontent.com/21977558/34321544-861df954-e837-11e7-921e-b00ae9c54321.png)
 
 
 
-As of now, we are recording the puzzles in dictionary form, where the keys are the boxes ('A1', 'A2', ... , 'I9') and the values are either the value for each box (if a value exists) or '.' (if the box has no value assigned yet). What we really want is for each value to represent all the available values for that box. For example, the box in the second row and fifth column above will have key 'B5' and value '47' (because 4 and 7 are the only possible values for it). The starting value for every empty box will thus be '123456789'.
+I recorded the puzzles in dictionary form, where the keys are the boxes ('A1', 'A2', ... , 'I9') and the values are either the value for each box (if a value exists) or '.' (if the box has no value assigned yet). What I really wanted is for each value to represent all the available values for that box. For example, the box in the second row and fifth column above will have key 'B5' and value '47' (because 4 and 7 are the only possible values for it). The starting value for every empty box will thus be '123456789'.
 
 
 ## Strategy 2: Only Choice
@@ -76,11 +78,11 @@ If there is only one box in a unit which would allow a certain digit, then that 
 
 
 
-We will now  use the techniques of eliminate and only_choice to write the function reduce_puzzle, which receives as input an unsolved puzzle and applies our two constraints repeatedly in an attempt to solve it.
+I now  used the techniques of eliminate and only_choice to write the function reduce_puzzle, which received as input an unsolved puzzle and applied the two constraints repeatedly in an attempt to solve it(constraint propagation).
 
 ## Strategy 3: Search
 
-Pick a box with a minimal number of possible values. Try to solve each of the puzzles obtained by choosing each of these values, recursively.
+I picked a box with a minimal number of possible values. Then I tried to solve each of the puzzles obtained by choosing each of these values, recursively.
 
 ![sudoku_search](https://user-images.githubusercontent.com/21977558/34321611-174cde44-e839-11e7-9255-3a3845d8b83b.png)
 
@@ -96,25 +98,23 @@ The naked twins technique is the following. Consider the following puzzle, and l
 
 
 
-As we can see, both belong to the same column, and both permit the values of 2 and 3. Now, we don't know which one has a 2 and which one has a 3, but we know one thing for sure — the values 2 and 3 are locked in those two boxes, so no other box in their same unit (the third column) can contain the values 2 or 3.
+As you saw , both belong to the same column, and both permit the values of 2 and 3. Now, I don't know which one has a 2 and which one has a 3, but I know one thing for sure — the values 2 and 3 are locked in those two boxes, so no other box in their same unit (the third column) can contain the values 2 or 3.
 
-Thus, we go over all the boxes in their same unit, and remove the values 2 and 3 from their possible values.
+Thus, I went over all the boxes in their same unit, and remove the values 2 and 3 from their possible values.
 
 
 ![sudoku_naked-twins-2](https://user-images.githubusercontent.com/21977558/34321630-c845869c-e839-11e7-9a13-97502ab410f7.png)
 
 
-As you can see, we've removed the values 2 and 3 from the boxes 'D3' and 'E3'. This is the naked twins technique. In this project, you'll write a function that implements this technique.
-
-
-
+As you can see, I have removed the values 2 and 3 from the boxes 'D3' and 'E3'. This is the naked twins technique. I implemented this technique in this project.
 
 
 
 ## Strategy 5 : Diagonal Sudoku
 
-A diagonal sudoku is like a regular sudoku, except that among the two main diagonals, the numbers 1 to 9 should all appear exactly once. In this project, you'll modify the functions we've written in the lecture (or you can write your own!) in order to solve every diagonal sudoku.
 
+
+A diagonal sudoku is like a regular sudoku, except that among the two main diagonals, the numbers 1 to 9 should all appear exactly once. I also implemented a technique to implement this in the project.
 
 
 ![diagonal-sudoku](https://user-images.githubusercontent.com/21977558/34321637-fa94a7ae-e839-11e7-9e8a-fde2a65243bd.png)
