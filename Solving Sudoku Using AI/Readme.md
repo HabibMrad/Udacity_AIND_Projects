@@ -110,7 +110,7 @@ As you can see, I have removed the values 2 and 3 from the boxes 'D3' and 'E3'. 
 
 
 
-## Strategy 5 : Diagonal Sudoku
+# Diagonal Sudoku
 
 
 
