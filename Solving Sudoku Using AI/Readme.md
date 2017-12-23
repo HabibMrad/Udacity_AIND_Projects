@@ -15,7 +15,8 @@ The convention for naming rows and columns is as follows.
     The 3x3 squares won't be labelled, but in the diagram, they can be seen with alternating colors of grey and white.
 
 
-![Sudoku Board Naming Convention]()
+![sudoku_board_naming_convention](https://user-images.githubusercontent.com/21977558/34321369-7d2357d0-e833-11e7-906f-16db50095d11.png)
+
 
 
 
@@ -29,7 +30,7 @@ We have named important elements created by these rows and columns that are rele
 
 Let's see an example. In the grids below, the set of highlighted boxes represent units. Each grid shows a different peer of the box at E3.
 
-![Sudoku Peers]()
+![sudoku_peers](https://user-images.githubusercontent.com/21977558/34321370-7f3d1740-e833-11e7-8a5a-07520ca52a55.png)
 
 
 
