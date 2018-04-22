@@ -6,13 +6,16 @@ In addition we were asked to develop our own heuristics to attempt to beat the s
 ## Instructions
 Play against AI:
 
-``` $ python play.py ```
+```bash
+$ python play.py ```
 
 Run tests:
 
-``` $ pytest ```
+```bash
+$ pytest ```
 
 Run genetic algorithm:
 
-``` $ python pit.py ```
+```bash
+$ python pit.py ```
 
