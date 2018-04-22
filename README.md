@@ -1,6 +1,6 @@
 # Udacity_AIND_Projects
 
-This repository Contain my project works from the [Udacity AI Nanodegree.](https://in.udacity.com/course/artificial-intelligence-nanodegree--nd889) There are a total of 9 projects in the Nanodegree (5 from the specialization that I will choose after 3 months!).
+This repository Contain my project works from the [Udacity AI Nanodegree.](https://in.udacity.com/course/artificial-intelligence-nanodegree--nd889) There are a total of 4 projects in the Nanodegree.
 
 ## List of Projects 
 
