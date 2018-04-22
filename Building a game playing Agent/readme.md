@@ -7,7 +7,7 @@ In addition we were asked to develop our own heuristics to attempt to beat the s
 Play against AI:
 
 ```bash
-$ python game_agent.py
+$ python play.py
 ```
 
 Run tests:
@@ -21,4 +21,7 @@ Run genetic algorithm:
 ```bash
 $ python pit.py
 ```
+## Additional Resources
+
+1. (https://github.com/anukarsh1/Udacity_AIND_Projects/blob/master/Building%20a%20game%20playing%20Agent/research_review.pdf)[Research Review]
 
