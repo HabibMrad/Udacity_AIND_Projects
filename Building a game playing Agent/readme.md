@@ -25,3 +25,4 @@ $ python pit.py
 
 1. [Research Review](https://github.com/anukarsh1/Udacity_AIND_Projects/blob/master/Building%20a%20game%20playing%20Agent/research_review.pdf)
 
+2. [Heuristics Analysis](https://github.com/anukarsh1/Udacity_AIND_Projects/blob/master/Building%20a%20game%20playing%20Agent/heuristic_analysis.pdf)
