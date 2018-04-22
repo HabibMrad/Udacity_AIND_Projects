@@ -23,5 +23,5 @@ $ python pit.py
 ```
 ## Additional Resources
 
-1. [https://github.com/anukarsh1/Udacity_AIND_Projects/blob/master/Building%20a%20game%20playing%20Agent/research_review.pdf](Research Review)
+1. [Research Review](https://github.com/anukarsh1/Udacity_AIND_Projects/blob/master/Building%20a%20game%20playing%20Agent/research_review.pdf)
 
