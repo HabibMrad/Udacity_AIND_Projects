@@ -9,8 +9,3 @@ This repository Contain my project works from the [Udacity AI Nanodegree.](https
 3. Creating a domain-independant planner
 4. Using HMMs to recognize ASL.
 
-### A note
-
-I am currently working on the second project of the nanodegree. I will update this repo as soon as I will finished with it.
-  Until then , have fun looking at my work! :metal: 
-
