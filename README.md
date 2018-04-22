@@ -5,7 +5,7 @@ This repository Contain my project works from the [Udacity AI Nanodegree.](https
 ## List of Projects 
 
 1. [Solving Sudoku with AI](https://github.com/anukarsh1/Udacity_AIND_Projects/tree/master/Solving%20Sudoku%20Using%20AI)
-2. Building an Adversarial Search Agent
+2. [Building an Adversarial Search Agent](https://github.com/anukarsh1/Udacity_AIND_Projects/tree/master/Building%20a%20game%20playing%20Agent)
 3. Creating a domain-independant planner
 4. Using HMMs to recognize ASL.
 
