@@ -7,15 +7,18 @@ In addition we were asked to develop our own heuristics to attempt to beat the s
 Play against AI:
 
 ```bash
-$ python play.py ```
+$ python play.py
+```
 
 Run tests:
 
 ```bash
-$ pytest ```
+$ pytest 
+```
 
 Run genetic algorithm:
 
 ```bash
-$ python pit.py ```
+$ python pit.py
+```
 
