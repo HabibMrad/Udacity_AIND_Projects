@@ -7,9 +7,11 @@ In addition we were asked to develop our own heuristics to attempt to beat the s
 Play against AI:
 
 ``` $ python play.py ```
+
 Run tests:
 
 ``` $ pytest ```
+
 Run genetic algorithm:
 
 ``` $ python pit.py ```
